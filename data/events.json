@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "name": "Global AI Summit 2026",
+        "location": "Online / Riyadh",
+        "date": "2026-09-10",
+        "type": "Conference",
+        "url": "https://globalaisummit.org"
+    },
+    {
+        "id": "2",
+        "name": "Cairo Data Science Meetup",
+        "location": "Greek Campus, Cairo",
+        "date": "2026-04-15",
+        "type": "Community",
+        "url": "https://www.meetup.com/cairo-data-science"
+    },
+    {
+        "id": "3",
+        "name": "Meta Hackathon Egypt",
+        "location": "Cairo",
+        "date": "2026-05-20",
+        "type": "Hackathon",
+        "url": "https://meta.com/hackathons"
+    }
+]

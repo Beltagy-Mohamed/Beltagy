@@ -1,0 +1,34 @@
+{
+  "habits": [
+    {
+      "id": "1",
+      "name": "Read 1 AI Paper",
+      "completed_dates": [],
+      "streak": 0,
+      "category": "Study"
+    },
+    {
+      "id": "2",
+      "name": "Code 1 Hour",
+      "completed_dates": [],
+      "streak": 0,
+      "category": "Coding"
+    },
+    {
+      "id": "3",
+      "name": "Reflect / Journal",
+      "completed_dates": [],
+      "streak": 0,
+      "category": "Writing"
+    },
+    {
+      "id": "1765275238119",
+      "name": "writing",
+      "category": "writing",
+      "completed_dates": [],
+      "streak": 0
+    }
+  ],
+  "journal": [],
+  "saved_articles": []
+}
