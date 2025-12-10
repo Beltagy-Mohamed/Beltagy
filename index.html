@@ -52,7 +52,7 @@
 
     <!-- Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;400;700&family=Audiowide&display=swap"
         rel="stylesheet">
 
     <style>
@@ -99,6 +99,74 @@
         ::-webkit-scrollbar {
             width: 8px;
         }
+
+        /* Typewriter Animation */
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #d946ef;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation:
+                typing 3.5s steps(30, end),
+                blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: #d946ef;
+            }
+        }
+
+        /* Glitch Effect */
+        @keyframes glitch {
+            0% {
+                text-shadow: 2px 2px 0px #00ffff, -2px -2px 0px #ff00ff;
+                transform: translate(2px, 2px);
+            }
+
+            25% {
+                text-shadow: -2px 2px 0px #00ffff, 2px -2px 0px #ff00ff;
+                transform: translate(-2px, 2px);
+            }
+
+            50% {
+                text-shadow: 2px -2px 0px #00ffff, -2px 2px 0px #ff00ff;
+                transform: translate(2px, -2px);
+            }
+
+            75% {
+                text-shadow: -2px -2px 0px #00ffff, 2px 2px 0px #ff00ff;
+                transform: translate(-2px, -2px);
+            }
+
+            100% {
+                text-shadow: 2px 2px 0px #00ffff, -2px -2px 0px #ff00ff;
+                transform: translate(0);
+            }
+        }
+
+        .glitch-hover:hover {
+            animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+            color: #ffffff;
+        }
+
 
         ::-webkit-scrollbar-track {
             background: #0f172a;
@@ -213,10 +281,12 @@
 
                 <!-- Text Content -->
                 <div class="reveal mb-6 flex flex-col items-center relative group" style="transition-delay: 0.1s;">
-                    <span
-                        class="text-sm md:text-lg font-mono text-primary tracking-[0.3em] uppercase opacity-80 group-hover:tracking-[0.5em] transition-all duration-500">
-                        Beltagy Mohamed
-                    </span>
+                    <div class="inline-block">
+                        <span
+                            class="text-xl md:text-2xl font-['Audiowide'] text-transparent bg-clip-text bg-gradient-to-r from-primary to-neon-purple tracking-widest typewriter block w-fit">
+                            Welcome, I'm
+                        </span>
+                    </div>
                     <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mt-2 relative z-10">
                         <span
                             class="bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-slate-400">Beltagy</span>
@@ -1282,7 +1352,20 @@
             </div>
         </section>
 
-        <footer class="py-8 text-center text-slate-600 text-sm border-t border-white/5">
+        <footer class="py-8 text-center text-slate-600 text-sm border-t border-white/5 relative overflow-hidden">
+            <!-- Creative Quote -->
+            <div class="mb-8 relative inline-block group cursor-default">
+                <div
+                    class="absolute -inset-4 bg-gradient-to-r from-primary/20 to-neon-purple/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                </div>
+                <div class="relative px-6 py-2 rounded-lg leading-none flex items-center">
+                    <span
+                        class="font-['Audiowide'] text-lg md:text-xl text-transparent bg-clip-text bg-gradient-to-r from-slate-500 to-slate-400 group-hover:from-white group-hover:to-primary transition-all duration-300 glitch-hover">
+                        "Without data, you're just another person with an opinion."
+                    </span>
+                </div>
+            </div>
+
             <p>© 2025 Beltagy Mohamed. Built with <i data-lucide="heart" class="inline w-3 h-3 text-red-500"></i> &
                 Code.</p>
         </footer>
