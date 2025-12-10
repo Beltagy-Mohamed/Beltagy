@@ -137,15 +137,28 @@
             </span>
         </a>
 
-        <div class="hidden md:flex items-center gap-2 pl-4">
-            <span class="text-xs font-mono text-slate-500">Portfolio v1.0</span>
+        <div class="hidden md:flex items-center gap-8 pl-4">
+            <a href="#home" class="text-sm font-medium text-slate-400 hover:text-white transition-colors">Home</a>
+            <a href="#about" class="text-sm font-medium text-slate-400 hover:text-white transition-colors">About</a>
+            <a href="#experience"
+                class="text-sm font-medium text-slate-400 hover:text-white transition-colors">Experience</a>
+            <a href="#skills" class="text-sm font-medium text-slate-400 hover:text-white transition-colors">Skills</a>
+            <a href="#projects"
+                class="text-sm font-medium text-slate-400 hover:text-white transition-colors">Projects</a>
+            <a href="#certifications"
+                class="text-sm font-medium text-slate-400 hover:text-white transition-colors">Certifications</a>
+            <a href="#recommendations"
+                class="text-sm font-medium text-slate-400 hover:text-white transition-colors">Recommendations</a>
+            <a href="#contact"
+                class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-white text-sm font-medium hover:bg-white/10 transition-all">Contact</a>
         </div>
     </nav>
 
     <main class="relative z-10 w-full overflow-hidden">
 
         <!-- Hero Section -->
-        <section class="relative min-h-[90vh] flex flex-col items-center justify-center px-6 pt-20 overflow-hidden">
+        <section id="home"
+            class="relative min-h-[90vh] flex flex-col items-center justify-center px-6 pt-20 overflow-hidden">
             <!-- Glow Effects -->
             <div class="absolute inset-0 pointer-events-none">
                 <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-[100px] animate-pulse">
@@ -190,6 +203,11 @@
                             aria-label="WhatsApp">
                             <i data-lucide="message-circle" class="w-5 h-5 group-hover:text-emerald-500"></i>
                         </a>
+                        <a href="https://github.com/Beltagy-Mohamed" target="_blank"
+                            class="p-3 rounded-full bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:border-slate-400/50 hover:bg-slate-400/20 transition-all duration-300 hover:scale-110 group"
+                            aria-label="GitHub">
+                            <i data-lucide="github" class="w-5 h-5 group-hover:text-slate-400"></i>
+                        </a>
                     </div>
                 </div>
 
@@ -233,7 +251,7 @@
 
 
         <!-- About / Story Section (Expanded) -->
-        <section class="py-20 px-6">
+        <section id="about" class="py-20 px-6">
             <div class="max-w-4xl mx-auto space-y-8 reveal">
                 <div
                     class="glass-card p-8 md:p-12 relative overflow-hidden group hover:border-primary/30 transition-all">
@@ -317,8 +335,11 @@
             </div>
         </section>
 
+
+
+
         <!-- Experience Section -->
-        <section class="py-20 px-6">
+        <section id="experience" class="py-20 px-6">
             <div class="max-w-4xl mx-auto">
                 <h2
                     class="text-3xl font-bold text-white mb-12 flex items-center gap-3 border-l-4 border-blue-500 pl-4 reveal">
@@ -353,30 +374,7 @@
                         </div>
                     </div>
 
-                    <!-- Qabas -->
-                    <div class="relative pl-8 reveal">
-                        <div
-                            class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-slate-950 border-2 border-blue-500">
-                        </div>
-                        <div class="glass-card p-6 flex flex-col md:flex-row gap-6 group hover:bg-white/10">
-                            <div class="flex-1">
-                                <div class="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-3">
-                                    <h3 class="text-xl font-bold text-white">Content Specialist</h3>
-                                    <span
-                                        class="text-xs font-mono px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Aug
-                                        2025 – Sep 2025</span>
-                                </div>
-                                <p class="text-sm text-slate-400 mb-4 font-bold">Qabas (قبس) • Egypt</p>
-                                <p class="text-slate-300 text-sm leading-relaxed">
-                                    At Qabas, I worked as a Content Specialist where I created engaging digital content,
-                                    developed messaging strategies, and supported the team in building meaningful online
-                                    communication. This role sharpened my storytelling ability, helped me understand
-                                    audience behavior, and improved my skills in delivering content that resonates with
-                                    real people.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+
 
                     <!-- DEPI -->
                     <div class="relative pl-8 reveal">
@@ -647,6 +645,166 @@
             </div>
         </section>
 
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2
+                    class="text-3xl font-bold text-white mb-12 flex items-center gap-3 border-l-4 border-purple-500 pl-4 reveal">
+                    <i data-lucide="cpu" class="text-purple-400"></i> Skills & Expertise
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Cloud & DevOps -->
+                    <div class="glass-card p-6 reveal hover:bg-white/5 transition-colors">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-2 rounded-lg bg-orange-500/10 text-orange-400">
+                                <i data-lucide="cloud" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Cloud & DevOps</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2 text-sm text-slate-300">
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">AWS Cloud
+                                Fundamentals</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">EC2, S3, IAM</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Lambda, Glue,
+                                SageMaker</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Serverless
+                                Architectures</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Cloud Security</span>
+                        </div>
+                    </div>
+
+                    <!-- Machine Learning & AI -->
+                    <div class="glass-card p-6 reveal hover:bg-white/5 transition-colors">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400">
+                                <i data-lucide="brain-circuit" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Machine Learning & AI</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2 text-sm text-slate-300">
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Supervised Learning</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Decision Trees & RF</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Unsupervised
+                                Learning</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">K-Means & DBSCAN</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Feature Engineering</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Model Optimization</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Deep Learning</span>
+                        </div>
+                    </div>
+
+                    <!-- Data Analysis & BI -->
+                    <div class="glass-card p-6 reveal hover:bg-white/5 transition-colors">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-2 rounded-lg bg-blue-500/10 text-blue-400">
+                                <i data-lucide="bar-chart-2" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Data Analysis & BI</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2 text-sm text-slate-300">
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Data Cleaning</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">EDA</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Statistical
+                                Analysis</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Power BI Dashboards</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">DAX</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Data Storytelling</span>
+                        </div>
+                    </div>
+
+                    <!-- Big Data -->
+                    <div class="glass-card p-6 reveal hover:bg-white/5 transition-colors">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-2 rounded-lg bg-cyan-500/10 text-cyan-400">
+                                <i data-lucide="database" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Big Data</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2 text-sm text-slate-300">
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Hadoop (HDFS, YARN)</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Apache Spark</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Kafka & Flume</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Hive & HBase</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">ClickHouse</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">ETL Pipelines</span>
+                        </div>
+                    </div>
+
+                    <!-- Data Science & Python -->
+                    <div class="glass-card p-6 reveal hover:bg-white/5 transition-colors">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-2 rounded-lg bg-yellow-500/10 text-yellow-400">
+                                <i data-lucide="flask-conical" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">DS & Python Stack</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2 text-sm text-slate-300">
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Pandas & NumPy</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Scikit-learn</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Data Wrangling</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">SQL (Advanced)</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Algorithms</span>
+                        </div>
+                    </div>
+
+                    <!-- Programming & Tools -->
+                    <div class="glass-card p-6 reveal hover:bg-white/5 transition-colors">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-2 rounded-lg bg-slate-500/10 text-slate-400">
+                                <i data-lucide="terminal" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Programming & Tools</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2 text-sm text-slate-300">
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Python</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">SQL</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Linux / Bash</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Git & GitHub</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">APIs (JSON/CSV)</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">VMWare</span>
+                        </div>
+                    </div>
+
+                    <!-- Visualization -->
+                    <div class="glass-card p-6 reveal hover:bg-white/5 transition-colors">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-2 rounded-lg bg-pink-500/10 text-pink-400">
+                                <i data-lucide="pie-chart" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Visualization</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2 text-sm text-slate-300">
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Power BI</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Matplotlib</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Seaborn</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Plotly</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Dashboard Analysis</span>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="glass-card p-6 reveal hover:bg-white/5 transition-colors">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-2 rounded-lg bg-indigo-500/10 text-indigo-400">
+                                <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Soft Skills</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2 text-sm text-slate-300">
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Problem Solving</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Team Leadership</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Communication</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Time Management</span>
+                            <span class="px-2 py-1 rounded bg-white/5 border border-white/10">Agile Mindset</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
         <!-- Education Section -->
         <section class="py-12 px-6">
             <div class="max-w-4xl mx-auto">
@@ -663,14 +821,165 @@
             </div>
         </section>
 
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2
+                    class="text-3xl font-bold text-white mb-12 flex items-center gap-3 border-l-4 border-cyan-500 pl-4 reveal">
+                    <i data-lucide="folder-git-2" class="text-cyan-400"></i> Featured Projects
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Project 1 -->
+                    <div class="glass-card p-6 flex flex-col h-full group hover:bg-white/10 transition-colors reveal">
+                        <div class="mb-4">
+                            <span
+                                class="text-xs font-mono px-2 py-1 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Graduation
+                                Project</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Clear
+                            View App</h3>
+                        <p class="text-sm text-slate-400 mb-4 line-clamp-3">
+                            A near real-time eye disease diagnosis system. Fine-tuned YOLOv8s achieving 96% accuracy on
+                            8K images, reducing diagnosis time by 99.7%. Includes a medical RAG-based Q&A chatbot using
+                            LLaMA 4.
+                        </p>
+                        <div class="mt-auto pt-4 border-t border-white/10">
+                            <div class="flex flex-wrap gap-2 text-xs text-slate-300">
+                                <span class="px-2 py-1 rounded bg-white/5">YOLOv8s</span>
+                                <span class="px-2 py-1 rounded bg-white/5">LLaMA 4</span>
+                                <span class="px-2 py-1 rounded bg-white/5">Flask</span>
+                                <span class="px-2 py-1 rounded bg-white/5">RAG</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="glass-card p-6 flex flex-col h-full group hover:bg-white/10 transition-colors reveal">
+                        <div class="mb-4">
+                            <span
+                                class="text-xs font-mono px-2 py-1 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">ML
+                                Classification</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                            Titanic Survival Prediction Engine</h3>
+                        <p class="text-sm text-slate-400 mb-4 line-clamp-3">
+                            Developed a machine learning classification model to predict passenger survival. Engineered
+                            complex features from demographics and utilized ensemble methods to maximize accuracy.
+                        </p>
+                        <div class="mt-auto pt-4 border-t border-white/10">
+                            <div class="flex flex-wrap gap-2 text-xs text-slate-300">
+                                <span class="px-2 py-1 rounded bg-white/5">Python</span>
+                                <span class="px-2 py-1 rounded bg-white/5">Pandas</span>
+                                <span class="px-2 py-1 rounded bg-white/5">Scikit-Learn</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="glass-card p-6 flex flex-col h-full group hover:bg-white/10 transition-colors reveal">
+                        <div class="mb-4">
+                            <span
+                                class="text-xs font-mono px-2 py-1 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Data
+                                Analysis</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">US
+                            Startup Expansion & Retail Analytics</h3>
+                        <p class="text-sm text-slate-400 mb-4 line-clamp-3">
+                            Comprehensive exploratory data analysis (EDA) on startup expansion strategies. Analyzed key
+                            performance metrics and visualized geographical sales distribution to identify high-growth
+                            regions.
+                        </p>
+                        <div class="mt-auto pt-4 border-t border-white/10">
+                            <div class="flex flex-wrap gap-2 text-xs text-slate-300">
+                                <span class="px-2 py-1 rounded bg-white/5">Seaborn</span>
+                                <span class="px-2 py-1 rounded bg-white/5">Geomapping</span>
+                                <span class="px-2 py-1 rounded bg-white/5">EDA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="glass-card p-6 flex flex-col h-full group hover:bg-white/10 transition-colors reveal">
+                        <div class="mb-4">
+                            <span
+                                class="text-xs font-mono px-2 py-1 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Business
+                                Intelligence</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                            Interactive Sales Intelligence Dashboard</h3>
+                        <p class="text-sm text-slate-400 mb-4 line-clamp-3">
+                            End-to-end BI solution using Power BI to analyze large-scale sales datasets. Utilized Power
+                            Query for cleaning and complex DAX measures to track KPIs like year-over-year growth.
+                        </p>
+                        <div class="mt-auto pt-4 border-t border-white/10">
+                            <div class="flex flex-wrap gap-2 text-xs text-slate-300">
+                                <span class="px-2 py-1 rounded bg-white/5">Power BI</span>
+                                <span class="px-2 py-1 rounded bg-white/5">DAX</span>
+                                <span class="px-2 py-1 rounded bg-white/5">Power Query</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="glass-card p-6 flex flex-col h-full group hover:bg-white/10 transition-colors reveal">
+                        <div class="mb-4">
+                            <span
+                                class="text-xs font-mono px-2 py-1 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Predictive
+                                Modeling</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Global
+                            University Ranking Forecast</h3>
+                        <p class="text-sm text-slate-400 mb-4 line-clamp-3">
+                            Leveraged Random Forest algorithm to forecast global university rankings. Analyzed features
+                            like research output and citations to determine key drivers of institutional success.
+                        </p>
+                        <div class="mt-auto pt-4 border-t border-white/10">
+                            <div class="flex flex-wrap gap-2 text-xs text-slate-300">
+                                <span class="px-2 py-1 rounded bg-white/5">Random Forest</span>
+                                <span class="px-2 py-1 rounded bg-white/5">Scikit-Learn</span>
+                                <span class="px-2 py-1 rounded bg-white/5">Regression</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="glass-card p-6 flex flex-col h-full group hover:bg-white/10 transition-colors reveal">
+                        <div class="mb-4">
+                            <span
+                                class="text-xs font-mono px-2 py-1 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Healthcare
+                                Analytics</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                            End-to-End Diabetes Diagnostic System</h3>
+                        <p class="text-sm text-slate-400 mb-4 line-clamp-3">
+                            Healthcare analytics project predicting diabetes diagnoses. Includes in-depth data
+                            exploration, rigorous preprocessing for outliers, and implementation of multiple
+                            classification models.
+                        </p>
+                        <div class="mt-auto pt-4 border-t border-white/10">
+                            <div class="flex flex-wrap gap-2 text-xs text-slate-300">
+                                <span class="px-2 py-1 rounded bg-white/5">ML Pipeline</span>
+                                <span class="px-2 py-1 rounded bg-white/5">Statistics</span>
+                                <span class="px-2 py-1 rounded bg-white/5">Visualization</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
         <!-- Certifications Section -->
-        <section class="py-20 px-6">
+        <section id="certifications" class="py-20 px-6">
             <div class="max-w-6xl mx-auto">
                 <h2
                     class="text-3xl font-bold text-white mb-12 flex items-center gap-3 border-l-4 border-emerald-500 pl-4 reveal">
                     <i data-lucide="award" class="text-emerald-400"></i> Certifications
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     <!-- Certificate Item: AWS -->
                     <div
                         class="group relative rounded-xl overflow-hidden glass-card hover:scale-[1.02] transition-all reveal">
@@ -883,8 +1192,55 @@
             </div>
         </section>
 
+        <!-- Recommendations Section -->
+        <section id="recommendations" class="py-20 px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2
+                    class="text-3xl font-bold text-white mb-12 flex items-center gap-3 border-l-4 border-yellow-500 pl-4 reveal">
+                    <i data-lucide="message-square-quote" class="text-yellow-400"></i> Recommendations
+                </h2>
+
+                <div class="relative pl-8 reveal">
+                    <!-- Decorator Line -->
+                    <div class="absolute top-0 bottom-0 left-0 w-1 bg-gradient-to-b from-yellow-500 to-transparent">
+                    </div>
+
+                    <div class="glass-card p-8 relative group hover:bg-white/10 transition-colors">
+                        <i data-lucide="quote"
+                            class="absolute top-6 right-6 w-8 h-8 text-white/10 group-hover:text-yellow-500/20 transition-colors"></i>
+
+                        <div class="flex flex-col md:flex-row gap-6 items-start">
+                            <div
+                                class="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 p-[2px] shrink-0 shadow-lg shadow-yellow-500/20">
+                                <div
+                                    class="w-full h-full rounded-full bg-slate-900 flex items-center justify-center text-xl font-bold text-white">
+                                    MT
+                                </div>
+                            </div>
+
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                                    Menna Tarek 🇵🇸
+                                </h3>
+                                <p class="text-xs text-slate-400 font-mono mb-4">
+                                    Lecturer at NTI | Data Analyst | Oct 6, 2024
+                                </p>
+
+                                <p class="text-slate-300 italic leading-relaxed text-lg">
+                                    "First off, let me admire the amazing work that Eng. Beltagy showed during his
+                                    internship. The dashboards he creatively made, not to mention his admirable
+                                    attitude, made my experience with him as a mentor really good. He's creative, smart,
+                                    and a hardworking data analyst to be. I wish you all the best ✨"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Footer / Contact -->
-        <section class="py-24 px-6 text-center">
+        <section id="contact" class="py-24 px-6 text-center">
             <div
                 class="max-w-2xl mx-auto bg-gradient-to-r from-primary/10 via-neon-purple/10 to-primary/10 p-12 rounded-3xl border border-white/10 reveal glass">
                 <h2 class="text-3xl font-bold text-white mb-6">Let's Talk 👋</h2>
@@ -910,6 +1266,17 @@
                         class="p-4 rounded-full bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:border-emerald-500/50 hover:bg-emerald-500/20 transition-all duration-300 hover:scale-110 group shadow-lg shadow-black/20"
                         aria-label="WhatsApp">
                         <i data-lucide="message-circle" class="w-6 h-6 group-hover:text-emerald-500"></i>
+                    </a>
+                    <a href="https://github.com/Beltagy-Mohamed" target="_blank"
+                        class="p-4 rounded-full bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:border-slate-400/50 hover:bg-slate-400/20 transition-all duration-300 hover:scale-110 group shadow-lg shadow-black/20"
+                        aria-label="GitHub">
+                        <i data-lucide="github" class="w-6 h-6 group-hover:text-slate-400"></i>
+                    </a>
+                </div>
+                <div class="mt-8">
+                    <a href="mailto:biltaji.mohamed@gmail.com"
+                        class="text-lg text-slate-300 hover:text-primary transition-colors font-medium border-b border-white/10 hover:border-primary pb-1">
+                        biltaji.mohamed@gmail.com
                     </a>
                 </div>
             </div>
