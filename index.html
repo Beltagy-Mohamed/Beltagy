@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beltagy Mohamed | AI & Data Analyst</title>
     <meta name="description" content="Portfolio of Beltagy Mohamed - Data Analyst & AI Specialist.">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -36,14 +37,23 @@
                     animation: {
                         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                         'bounce-slow': 'bounce 3s infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
                     }
                 }
             }
         }
     </script>
-    
+
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap"
+        rel="stylesheet">
 
     <style>
         body {
@@ -52,7 +62,7 @@
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
         }
-        
+
         .glass {
             background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(24px);
@@ -67,19 +77,10 @@
             border-radius: 1rem;
             transition: all 0.3s ease;
         }
-        
+
         .glass-card:hover {
             border-color: rgba(124, 58, 237, 0.4);
             box-shadow: 0 0 15px rgba(124, 58, 237, 0.2);
-        }
-
-        .text-gradient {
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            background-image: linear-gradient(to right, #a78bfa, #38bdf8, #a78bfa);
-            background-size: 200% auto;
-            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
 
         /* Scroll Animation Utility */
@@ -88,42 +89,51 @@
             transform: translateY(30px);
             transition: all 0.8s ease-out;
         }
+
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         /* Smooth Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
+
         ::-webkit-scrollbar-track {
-            background: #0f172a; 
+            background: #0f172a;
         }
+
         ::-webkit-scrollbar-thumb {
-            background: #334155; 
+            background: #334155;
             border-radius: 4px;
         }
+
         ::-webkit-scrollbar-thumb:hover {
-            background: #475569; 
+            background: #475569;
         }
     </style>
 </head>
+
 <body class="bg-black text-slate-200">
 
+    <!-- Interactive Background Canvas -->
     <!-- Interactive Background Canvas -->
     <canvas id="particle-canvas" class="fixed inset-0 z-0 pointer-events-none opacity-60"></canvas>
 
     <!-- Navbar -->
-    <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl bg-black/80 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl shadow-primary/10 px-6 py-3 flex justify-between items-center transition-all duration-300 hover:border-primary/30">
+    <nav
+        class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl bg-black/80 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl shadow-primary/10 px-6 py-3 flex justify-between items-center transition-all duration-300 hover:border-primary/30">
         <a href="#" class="flex items-center gap-2 group">
-            <div class="relative w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-neon-purple p-[1px] group-hover:shadow-[0_0_15px_rgba(124,58,237,0.5)] transition-shadow">
+            <div
+                class="relative w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-neon-purple p-[1px] group-hover:shadow-[0_0_15px_rgba(124,58,237,0.5)] transition-shadow">
                 <div class="w-full h-full bg-black rounded-lg flex items-center justify-center">
                     <i data-lucide="terminal" class="w-4 h-4 text-white group-hover:rotate-12 transition-transform"></i>
                 </div>
             </div>
-            <span class="font-bold text-lg tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
-                Beltagy Mohamed
+            <span
+                class="font-bold text-lg tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
+                Beltagy El-Romhy
             </span>
         </a>
 
@@ -133,173 +143,176 @@
     </nav>
 
     <main class="relative z-10 w-full overflow-hidden">
-        
+
         <!-- Hero Section -->
         <section class="relative min-h-[90vh] flex flex-col items-center justify-center px-6 pt-20 overflow-hidden">
             <!-- Glow Effects -->
             <div class="absolute inset-0 pointer-events-none">
-                <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-[100px] animate-pulse"></div>
-                <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-purple/10 rounded-full blur-[120px] animate-pulse" style="animation-delay: 1s;"></div>
+                <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-[100px] animate-pulse">
+                </div>
+                <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-purple/10 rounded-full blur-[120px] animate-pulse"
+                    style="animation-delay: 1s;"></div>
             </div>
 
             <div class="max-w-5xl mx-auto text-center relative z-10">
                 <!-- Profile Image -->
                 <div class="mb-8 relative inline-block group reveal">
                     <div class="w-40 h-40 md:w-56 md:h-56 rounded-full border-2 border-primary/30 p-2 relative">
-                        <div class="w-full h-full rounded-full overflow-hidden shadow-2xl shadow-primary/20 group-hover:shadow-primary/40 transition-shadow duration-500">
-                            <!-- Use relative path for assets assuming structure is maintained or flattened -->
-                            <img src="assets/profile/profile.jpg" alt="Beltagy Mohamed" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div
+                            class="w-full h-full rounded-full overflow-hidden shadow-2xl shadow-primary/20 group-hover:shadow-primary/40 transition-shadow duration-500">
+                            <img src="assets/profile/profile.jpg" alt="Beltagy Mohamed"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
                         </div>
-                        <div class="absolute -bottom-2 -right-2 bg-primary text-black text-xs font-bold px-3 py-1 rounded-full border-4 border-black animate-bounce-slow">
+                        <div
+                            class="absolute -bottom-2 -right-2 bg-primary text-black text-xs font-bold px-3 py-1 rounded-full border-4 border-black animate-bounce-slow">
                             OPEN TO WORK
                         </div>
+                    </div>
+                    <!-- Contact under photo -->
+                    <div class="mt-6 flex gap-4 items-center justify-center animate-fade-in-up">
+                        <a href="mailto:biltaji.mohamed@gmail.com"
+                            class="p-3 rounded-full bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:border-primary/50 hover:bg-primary/20 transition-all duration-300 hover:scale-110 group"
+                            aria-label="Email">
+                            <i data-lucide="mail" class="w-5 h-5 group-hover:text-primary"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/beltagy" target="_blank"
+                            class="p-3 rounded-full bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:border-[#0077b5]/50 hover:bg-[#0077b5]/20 transition-all duration-300 hover:scale-110 group"
+                            aria-label="LinkedIn">
+                            <i data-lucide="linkedin" class="w-5 h-5 group-hover:text-[#0077b5]"></i>
+                        </a>
+                        <a href="https://twitter.com/Biltaji_mohamed" target="_blank"
+                            class="p-3 rounded-full bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:border-blue-400/50 hover:bg-blue-400/20 transition-all duration-300 hover:scale-110 group"
+                            aria-label="Twitter">
+                            <i data-lucide="twitter" class="w-5 h-5 group-hover:text-blue-400"></i>
+                        </a>
+                        <a href="https://wa.me/201096383395" target="_blank"
+                            class="p-3 rounded-full bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:border-emerald-500/50 hover:bg-emerald-500/20 transition-all duration-300 hover:scale-110 group"
+                            aria-label="WhatsApp">
+                            <i data-lucide="message-circle" class="w-5 h-5 group-hover:text-emerald-500"></i>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Text Content -->
-                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight reveal" style="transition-delay: 0.1s;">
-                    Beltagy Mohamed
-                </h1>
+                <div class="reveal mb-6 flex flex-col items-center relative group" style="transition-delay: 0.1s;">
+                    <span
+                        class="text-sm md:text-lg font-mono text-primary tracking-[0.3em] uppercase opacity-80 group-hover:tracking-[0.5em] transition-all duration-500">
+                        Beltagy Mohamed
+                    </span>
+                    <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mt-2 relative z-10">
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-slate-400">Beltagy</span>
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-b from-primary-light via-white to-slate-400">El-Romhy</span>
+                    </h1>
+                    <div
+                        class="absolute -inset-4 bg-primary/20 blur-3xl opacity-0 group-hover:opacity-40 transition-opacity duration-700 rounded-full">
+                    </div>
+                </div>
 
-                <p class="text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-neon-purple font-medium mb-8 reveal" style="transition-delay: 0.2s;">
+                <p class="text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-neon-purple font-medium mb-8 reveal"
+                    style="transition-delay: 0.2s;">
                     Data Analyst • AI & ML Explorer • Tech Innovator
                 </p>
 
-                <p class="text-slate-400 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-10 reveal" style="transition-delay: 0.3s;">
-                    Data Analyst & AI Specialist with expertise in machine learning, deep learning, big data engineering, and cloud-based AI solutions. Proficient in Python, R, SQL, Power BI, Tableau, and AWS SageMaker. Experienced in Hadoop, Spark, Kafka, and ETL workflows. Achieved 96% model accuracy and 99.7% reduction in AI diagnosis time. Strong collaborator with leadership in cross-functional teams solving real-world challenges.
+                <p class="text-slate-400 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-10 reveal"
+                    style="transition-delay: 0.3s;">
+                    I’m a passionate Machine Learning Engineer who believes that data isn't just numbers—it’s a way to
+                    solve real problems and create meaningful human impact.
                 </p>
 
-                <!-- Social & CV -->
-                <div class="flex flex-col items-center gap-6 reveal" style="transition-delay: 0.4s;">
-                    <div class="flex flex-wrap gap-4 justify-center">
-                        <a href="https://www.linkedin.com/in/beltagy-" target="_blank" class="px-6 py-3 rounded-full bg-white/5 border border-white/10 text-slate-300 font-medium transition-all duration-300 flex items-center gap-2 backdrop-blur-md hover:text-white hover:scale-110 active:scale-95 hover:shadow-lg hover:bg-[#0077b5] hover:border-[#0077b5]">
-                            <i data-lucide="linkedin" class="w-5 h-5"></i> <span>LinkedIn</span>
-                        </a>
-                        <a href="mailto:biltaji.mohamed@gmail.com" target="_blank" class="px-6 py-3 rounded-full bg-white/5 border border-white/10 text-slate-300 font-medium transition-all duration-300 flex items-center gap-2 backdrop-blur-md hover:text-white hover:scale-110 active:scale-95 hover:shadow-lg hover:bg-[#EA4335] hover:border-[#EA4335]">
-                            <i data-lucide="mail" class="w-5 h-5"></i> <span>Gmail</span>
-                        </a>
-                        <a href="https://wa.me/201096383395" target="_blank" class="px-6 py-3 rounded-full bg-white/5 border border-white/10 text-slate-300 font-medium transition-all duration-300 flex items-center gap-2 backdrop-blur-md hover:text-white hover:scale-110 active:scale-95 hover:shadow-lg hover:bg-[#25D366] hover:border-[#25D366]">
-                            <i data-lucide="message-circle" class="w-5 h-5"></i> <span>WhatsApp</span>
-                        </a>
-                        <a href="https://twitter.com/Biltaji_mohamed" target="_blank" class="px-6 py-3 rounded-full bg-white/5 border border-white/10 text-slate-300 font-medium transition-all duration-300 flex items-center gap-2 backdrop-blur-md hover:text-white hover:scale-110 active:scale-95 hover:shadow-lg hover:bg-black hover:border-slate-500">
-                            <i data-lucide="twitter" class="w-5 h-5"></i> <span>X</span>
-                        </a>
-                    </div>
-
-                    <a href="assets/cv/Beltagy_Mohamed_cv.pdf" download class="px-8 py-3 rounded-full bg-primary text-black font-bold hover:bg-primary-light transition-all flex items-center gap-2 shadow-lg shadow-primary/25 hover:scale-105 active:scale-95">
+                <div class="reveal" style="transition-delay: 0.4s;">
+                    <a href="assets/cv/Beltagy_Mohamed_cv.pdf" download
+                        class="px-8 py-3 rounded-full bg-primary text-black font-bold hover:bg-primary-light transition-all flex items-center gap-2 shadow-lg shadow-primary/25 hover:scale-105 active:scale-95 mx-auto w-fit">
                         <i data-lucide="download" class="w-4 h-4"></i> Download CV
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section class="py-20 px-6 relative">
-            <div class="absolute top-0 right-0 w-full h-[500px] bg-gradient-to-b from-primary/5 to-transparent pointer-events-none"></div>
-            <div class="max-w-6xl mx-auto relative z-10">
-                <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3 border-l-4 border-primary pl-4 reveal">
-                    <i data-lucide="cpu" class="text-primary"></i> Technical Arsenal
-                </h2>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Programming -->
-                    <div class="group p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/50 hover:bg-white/10 transition-all duration-300 relative overflow-hidden h-full reveal">
-                        <div class="absolute -right-10 -top-10 text-white/5 group-hover:text-primary/10 transition-colors pointer-events-none">
-                            <i data-lucide="code-2" class="w-[120px] h-[120px]"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3 relative z-10">
-                            <div class="p-2 rounded-lg bg-primary/10 text-primary"><i data-lucide="code-2"></i></div>
-                            Programming Languages
-                        </h3>
-                        <div class="flex flex-wrap gap-2 relative z-10">
-                            <span class="px-3 py-1 rounded-full text-sm font-medium border bg-black/40 border-slate-700 text-slate-300 hover:text-primary hover:border-primary/50 cursor-default">Python</span>
-                            <span class="px-3 py-1 rounded-full text-sm font-medium border bg-black/40 border-slate-700 text-slate-300 hover:text-primary hover:border-primary/50 cursor-default">C++</span>
-                            <span class="px-3 py-1 rounded-full text-sm font-medium border bg-black/40 border-slate-700 text-slate-300 hover:text-primary hover:border-primary/50 cursor-default">SQL</span>
-                        </div>
+
+        <!-- About / Story Section (Expanded) -->
+        <section class="py-20 px-6">
+            <div class="max-w-4xl mx-auto space-y-8 reveal">
+                <div
+                    class="glass-card p-8 md:p-12 relative overflow-hidden group hover:border-primary/30 transition-all">
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[80px] group-hover:bg-primary/20 transition-all">
                     </div>
 
-                    <!-- Data Analysis & ML -->
-                    <div class="group p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/50 hover:bg-white/10 transition-all duration-300 relative overflow-hidden h-full reveal" style="transition-delay: 0.1s;">
-                        <div class="absolute -right-10 -top-10 text-white/5 group-hover:text-primary/10 transition-colors pointer-events-none">
-                            <i data-lucide="brain" class="w-[120px] h-[120px]"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3 relative z-10">
-                            <div class="p-2 rounded-lg bg-primary/10 text-primary"><i data-lucide="brain"></i></div>
-                            Data Analysis & ML/DL
-                        </h3>
-                        <div class="flex flex-wrap gap-2 relative z-10">
-                            <span class="px-3 py-1 rounded-full text-sm font-medium border bg-black/40 border-slate-700 text-slate-300 hover:text-primary hover:border-primary/50 cursor-default">Pandas</span>
-                            <span class="px-3 py-1 rounded-full text-sm font-medium border bg-black/40 border-slate-700 text-slate-300 hover:text-primary hover:border-primary/50 cursor-default">NumPy</span>
-                            <span class="px-3 py-1 rounded-full text-sm font-medium border bg-black/40 border-slate-700 text-slate-300 hover:text-primary hover:border-primary/50 cursor-default">Scikit-learn</span>
-                            <span class="px-3 py-1 rounded-full text-sm font-medium border bg-black/40 border-slate-700 text-slate-300 hover:text-primary hover:border-primary/50 cursor-default">TensorFlow</span>
-                            <span class="px-3 py-1 rounded-full text-sm font-medium border bg-black/40 border-slate-700 text-slate-300 hover:text-primary hover:border-primary/50 cursor-default">Keras</span>
-                            <span class="px-3 py-1 rounded-full text-sm font-medium border bg-black/40 border-slate-700 text-slate-300 hover:text-primary hover:border-primary/50 cursor-default">PyTorch</span>
-                        </div>
+                    <!-- How It All Started -->
+                    <div class="mb-10">
+                        <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                            <i data-lucide="play-circle" class="text-primary"></i> How It All Started
+                        </h2>
+                        <p class="text-slate-300 leading-relaxed text-lg">
+                            My journey began with a lot of confusion. There were too many learning sources, no mentor to
+                            guide me, and an overwhelming amount of information. But over time, I learned how to filter,
+                            focus, and grow, building a solid technical foundation through self-study, free reading, and
+                            deep curiosity.
+                        </p>
                     </div>
 
-                    <!-- Visualization -->
-                    <div class="group p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/50 hover:bg-white/10 transition-all duration-300 relative overflow-hidden h-full reveal" style="transition-delay: 0.2s;">
-                        <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3 relative z-10">
-                            <div class="p-2 rounded-lg bg-primary/10 text-primary"><i data-lucide="bar-chart-3"></i></div>
-                            Data Visualization
-                        </h3>
-                        <div class="flex flex-wrap gap-2 relative z-10">
-                            <span class="px-3 py-1 rounded-full text-sm font-medium border bg-black/40 border-slate-700 text-slate-300 hover:text-primary hover:border-primary/50 cursor-default">Tableau</span>
-                            <span class="px-3 py-1 rounded-full text-sm font-medium border bg-black/40 border-slate-700 text-slate-300 hover:text-primary hover:border-primary/50 cursor-default">Power BI</span>
-                            <span class="px-3 py-1 rounded-full text-sm font-medium border bg-black/40 border-slate-700 text-slate-300 hover:text-primary hover:border-primary/50 cursor-default">Matplotlib</span>
-                            <span class="px-3 py-1 rounded-full text-sm font-medium border bg-black/40 border-slate-700 text-slate-300 hover:text-primary hover:border-primary/50 cursor-default">Seaborn</span>
-                        </div>
+                    <!-- What I'm Most Proud Of -->
+                    <div class="mb-10">
+                        <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                            <i data-lucide="star" class="text-yellow-400"></i> What I’m Most Proud Of
+                        </h2>
+                        <p class="text-slate-300 leading-relaxed text-lg">
+                            One of my proudest achievements is my graduation project on diagnosing eye diseases. This
+                            wasn’t just about algorithms—it was about helping people. I pushed myself and my team to
+                            reach the highest accuracy possible because the project meant something deeper to us.
+                        </p>
                     </div>
 
-                    <!-- Big Data -->
-                    <div class="group p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/50 hover:bg-white/10 transition-all duration-300 relative overflow-hidden h-full reveal">
-                         <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3 relative z-10">
-                            <div class="p-2 rounded-lg bg-primary/10 text-primary"><i data-lucide="globe"></i></div>
-                            Big Data & Cloud
-                        </h3>
-                        <div class="flex flex-wrap gap-2 relative z-10">
-                             <span class="px-3 py-1 rounded-full text-sm font-medium border bg-black/40 border-slate-700 text-slate-300 hover:text-primary hover:border-primary/50 cursor-default">Hadoop</span>
-                             <span class="px-3 py-1 rounded-full text-sm font-medium border bg-black/40 border-slate-700 text-slate-300 hover:text-primary hover:border-primary/50 cursor-default">Spark</span>
-                             <span class="px-3 py-1 rounded-full text-sm font-medium border bg-black/40 border-slate-700 text-slate-300 hover:text-primary hover:border-primary/50 cursor-default">AWS SageMaker</span>
-                             <span class="px-3 py-1 rounded-full text-sm font-medium border bg-black/40 border-slate-700 text-slate-300 hover:text-primary hover:border-primary/50 cursor-default">Kafka</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section class="py-20 px-6 bg-slate-950/30">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3 border-l-4 border-neon-purple pl-4 reveal">
-                    <i data-lucide="graduation-cap" class="text-neon-purple"></i> Education
-                </h2>
-
-                <div class="bg-white/5 border border-white/5 rounded-2xl p-8 hover:border-neon-purple/30 transition-all group reveal">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-                        <div>
-                            <h3 class="text-2xl font-bold text-white group-hover:text-neon-purple transition-colors">Bachelor of Computer Science</h3>
-                            <p class="text-lg text-slate-400">Fayoum University, Egypt</p>
-                        </div>
-                        <span class="px-4 py-2 rounded-full bg-neon-purple/10 text-neon-purple border border-neon-purple/20 font-mono text-sm whitespace-nowrap">
-                            Sep 2021 - Aug 2025
-                        </span>
+                    <!-- Impact Beyond the Classroom -->
+                    <div class="mb-10">
+                        <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                            <i data-lucide="heart" class="text-red-400"></i> Impact Beyond the Classroom
+                        </h2>
+                        <p class="text-slate-300 leading-relaxed text-lg mb-4">
+                            I served as Vice Head of Data Analysis at Enactus Fayoum, where I:
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-slate-300 ml-4">
+                            <li>Trained members in data analysis basics</li>
+                            <li>Worked on a key project addressing environmental pollution</li>
+                            <li>Helped bridge technical skills with real community needs</li>
+                        </ul>
+                        <p class="text-slate-300 leading-relaxed text-lg mt-4">
+                            These experiences showed me that data can be both technical and social—it can change lives.
+                        </p>
                     </div>
 
-                    <div class="flex items-center gap-2 mb-6">
-                        <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 hover:bg-emerald-500/20">Grade: Good</span>
+                    <!-- Teamwork & Energy -->
+                    <div class="mb-10">
+                        <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                            <i data-lucide="users" class="text-blue-400"></i> Teamwork & Energy
+                        </h2>
+                        <p class="text-slate-300 leading-relaxed text-lg">
+                            I thrive in team environments. Collaboration gives me energy, motivation, and inspiration. I
+                            love the process of brainstorming together, solving problems, and learning from different
+                            perspectives. Team spirit always pushes me to do more.
+                        </p>
                     </div>
 
-                    <ul class="space-y-3 text-slate-300">
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-neon-purple flex-shrink-0"></span>
-                            <span class="text-sm">AI-based medical diagnosis project with advanced ML model development</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-neon-purple flex-shrink-0"></span>
-                            <span class="text-sm">1st place in Software Engineering course project</span>
-                        </li>
-                    </ul>
+                    <!-- What Sets Me Apart -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                            <i data-lucide="zap" class="text-yellow-300"></i> What Sets Me Apart
+                        </h2>
+                        <p class="text-slate-300 leading-relaxed text-lg">
+                            If I had to pick one thing that makes me different, it’s this: <strong class="text-white">I
+                                never stop learning.</strong> I developed a strong habit of reading—both in my field and
+                            beyond—which sharpened my thinking, expanded my worldview, and gave me the tools to solve
+                            problems in smarter ways.
+                        </p>
+                        <p
+                            class="text-slate-300 leading-relaxed text-lg mt-4 font-medium italic text-center text-primary/80">
+                            "I’m here to build, learn, and grow—with people, with data, and with purpose."
+                        </p>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -307,156 +320,622 @@
         <!-- Experience Section -->
         <section class="py-20 px-6">
             <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3 border-l-4 border-blue-500 pl-4 reveal">
+                <h2
+                    class="text-3xl font-bold text-white mb-12 flex items-center gap-3 border-l-4 border-blue-500 pl-4 reveal">
                     <i data-lucide="briefcase" class="text-blue-500"></i> Professional Experience
                 </h2>
 
                 <div class="space-y-12 pl-4 lg:pl-0 border-l-2 border-slate-800 ml-4 lg:ml-0">
-                    <!-- Setup one template job, repeat for others -->
+
+                    <!-- Banque Misr -->
                     <div class="relative pl-8 reveal">
-                        <div class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-slate-950 border-2 border-blue-500 transition-transform hover:scale-125"></div>
-                        <div class="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-blue-500/30 transition-all hover:bg-white/10 group flex flex-col md:flex-row gap-6">
-                            <div class="flex-1">
-                                <div class="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-3">
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center overflow-hidden shrink-0 border border-white/10">
-                                            <img src="assets/volunteer/nti.png" alt="NTI" class="w-full h-full object-cover" onerror="this.onerror=null; this.parentNode.innerText='🏢'">
-                                        </div>
-                                        <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">AWS Machine Learning Engineer Intern</h3>
-                                    </div>
-                                    <span class="text-xs font-mono px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20 w-fit whitespace-nowrap">NTI, Cairo</span>
-                                </div>
-                                <p class="text-sm text-slate-400 mb-4 flex items-center gap-2 ml-[3.25rem]">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span> Nov 2024 - May 2025
-                                </p>
-                                <ul class="space-y-2 ml-[3.25rem] text-sm text-slate-300">
-                                    <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">▹</span> Cloud-based AI solution capstone project</li>
-                                    <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">▹</span> Applied supervised/unsupervised learning & optimization</li>
-                                </ul>
-                            </div>
+                        <div
+                            class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-slate-950 border-2 border-blue-500">
                         </div>
-                    </div>
-                
-                     <!-- Enactus -->
-                     <div class="relative pl-8 reveal">
-                        <div class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-slate-950 border-2 border-blue-500 transition-transform hover:scale-125"></div>
-                        <div class="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-blue-500/30 transition-all hover:bg-white/10 group flex flex-col md:flex-row gap-6">
+                        <div class="glass-card p-6 flex flex-col md:flex-row gap-6 group hover:bg-white/10">
                             <div class="flex-1">
                                 <div class="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-3">
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center overflow-hidden shrink-0 border border-white/10">
-                                            <img src="assets/volunteer/enactus.jpg" alt="Enactus" class="w-full h-full object-cover" onerror="this.onerror=null; this.parentNode.innerText='🏢'">
-                                        </div>
-                                        <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">Vice President — Data Analysis Team</h3>
-                                    </div>
-                                    <span class="text-xs font-mono px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20 w-fit whitespace-nowrap">Enactus Fayoum</span>
+                                    <h3 class="text-xl font-bold text-white">Internship Trainee</h3>
+                                    <span
+                                        class="text-xs font-mono px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Sep
+                                        2025</span>
                                 </div>
-                                <p class="text-sm text-slate-400 mb-4 flex items-center gap-2 ml-[3.25rem]">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-slate-600"></span> Jan 2025 - Jul 2025
+                                <p class="text-sm text-slate-400 mb-4 font-bold">Banque Misr • Egypt</p>
+                                <p class="text-slate-300 text-sm leading-relaxed">
+                                    This on-site internship at Banque Misr was a powerful introduction to the
+                                    professional world. I learned how to negotiate effectively, collaborate within a
+                                    structured environment, and support colleagues under real deadlines. Beyond the
+                                    technical exposure, the experience strengthened my time-management skills and gave
+                                    me firsthand insight into how financial operations run inside one of Egypt’s leading
+                                    banks.
                                 </p>
-                                <ul class="space-y-2 ml-[3.25rem] text-sm text-slate-300">
-                                    <li class="flex items-start gap-2"><span class="text-blue-500 mt-1">▹</span> Led team to win Schneider Electric Competition</li>
-                                </ul>
                             </div>
                         </div>
                     </div>
 
-                    <!-- More experiences can be added here following same pattern, abbreviated for now -->
+                    <!-- Qabas -->
+                    <div class="relative pl-8 reveal">
+                        <div
+                            class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-slate-950 border-2 border-blue-500">
+                        </div>
+                        <div class="glass-card p-6 flex flex-col md:flex-row gap-6 group hover:bg-white/10">
+                            <div class="flex-1">
+                                <div class="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-3">
+                                    <h3 class="text-xl font-bold text-white">Content Specialist</h3>
+                                    <span
+                                        class="text-xs font-mono px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Aug
+                                        2025 – Sep 2025</span>
+                                </div>
+                                <p class="text-sm text-slate-400 mb-4 font-bold">Qabas (قبس) • Egypt</p>
+                                <p class="text-slate-300 text-sm leading-relaxed">
+                                    At Qabas, I worked as a Content Specialist where I created engaging digital content,
+                                    developed messaging strategies, and supported the team in building meaningful online
+                                    communication. This role sharpened my storytelling ability, helped me understand
+                                    audience behavior, and improved my skills in delivering content that resonates with
+                                    real people.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DEPI -->
+                    <div class="relative pl-8 reveal">
+                        <div
+                            class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-slate-950 border-2 border-blue-500">
+                        </div>
+                        <div class="glass-card p-6 flex flex-col md:flex-row gap-6 group hover:bg-white/10">
+                            <div class="flex-1">
+                                <div class="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-3">
+                                    <h3 class="text-xl font-bold text-white">AWS Machine Learning Engineer</h3>
+                                    <span
+                                        class="text-xs font-mono px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Oct
+                                        2024 – Jun 2025</span>
+                                </div>
+                                <p class="text-sm text-slate-400 mb-4 font-bold">Digital Egypt Pioneers Initiative -
+                                    DEPI • Cairo, Egypt</p>
+                                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                                    Through the Digital Egypt Pioneers Initiative, I developed solid expertise in
+                                    cloud-based machine learning. I worked hands-on with AWS services, built ML models,
+                                    deployed scalable solutions, and strengthened essential professional skills.
+                                </p>
+                                <div class="space-y-3">
+                                    <div>
+                                        <h4 class="text-white font-bold text-sm mb-2">Highlights:</h4>
+                                        <ul class="list-disc list-inside text-slate-400 text-xs pl-2 space-y-1">
+                                            <li>Mastered AWS fundamentals (EC2, S3, IAM).</li>
+                                            <li>Built ML workflows using SageMaker, Lambda, and Glue.</li>
+                                            <li>Applied supervised & unsupervised learning on real datasets.</li>
+                                            <li>Improved model performance for cloud environments.</li>
+                                            <li>Enhanced teamwork, presentation, and problem-solving skills.</li>
+                                        </ul>
+                                    </div>
+                                    <p class="text-slate-300 text-sm leading-relaxed mt-3 italic">
+                                        This journey shaped my ability to design end-to-end ML solutions on the cloud
+                                        with confidence.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enactus -->
+                    <div class="relative pl-8 reveal">
+                        <div
+                            class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-slate-950 border-2 border-blue-500">
+                        </div>
+                        <div class="glass-card p-6 flex flex-col md:flex-row gap-6 group hover:bg-white/10">
+                            <div class="flex-1">
+                                <div class="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-3">
+                                    <h3 class="text-xl font-bold text-white flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-white/10 p-1 overflow-hidden shrink-0">
+                                            <img src="assets/volunteer/enactus.jpg" alt="Enactus Logo"
+                                                class="w-full h-full object-contain">
+                                        </div>
+                                        Vice Head of Data Analysis
+                                    </h3>
+                                    <span
+                                        class="text-xs font-mono px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Mar
+                                        2025 – May 2025</span>
+                                </div>
+                                <p class="text-sm text-slate-400 mb-4 font-bold">Enactus Fayoum University • Egypt</p>
+                                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                                    Serving as Vice Head of the Data Analysis team at Enactus was one of my most
+                                    meaningful leadership experiences. I mentored students, simplified complex
+                                    analytical concepts, and supported the team through real-world applications.
+                                </p>
+                                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                                    Through frequent board meetings, I gained practical experience in strategy,
+                                    planning, and structured decision-making.
+                                </p>
+                                <p class="text-slate-300 text-sm leading-relaxed">
+                                    We also organized student-focused events and on-campus campaigns. This role combined
+                                    leadership, community engagement, and data-driven thinking — making it a
+                                    transformative chapter in my growth.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Qafza -->
+                    <div class="relative pl-8 reveal">
+                        <div
+                            class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-slate-950 border-2 border-blue-500">
+                        </div>
+                        <div class="glass-card p-6 flex flex-col md:flex-row gap-6 group hover:bg-white/10">
+                            <div class="flex-1">
+                                <div class="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-3">
+                                    <h3 class="text-xl font-bold text-white flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-white/10 p-1 overflow-hidden shrink-0">
+                                            <img src="assets/volunteer/qafza.jpg" alt="Qafza Logo"
+                                                class="w-full h-full object-contain">
+                                        </div>
+                                        Data Analyst (Power BI)
+                                    </h3>
+                                    <span
+                                        class="text-xs font-mono px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Dec
+                                        2024</span>
+                                </div>
+                                <p class="text-sm text-slate-400 mb-4 font-bold">ةزفق Qafza</p>
+                                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                                    During my internship at Qafza, I worked on transforming data into meaningful
+                                    insights using Power BI. I designed dashboards, created DAX measures, explored
+                                    business KPIs, and built analytical reports that supported decision-making.
+                                </p>
+                                <div class="space-y-3">
+                                    <div>
+                                        <h4 class="text-white font-bold text-sm mb-2">Key Contributions:</h4>
+                                        <ul class="list-disc list-inside text-slate-400 text-xs pl-2 space-y-1">
+                                            <li>Cleaned and prepared large datasets using ETL workflows.</li>
+                                            <li>Built interactive dashboards using Power BI.</li>
+                                            <li>Performed trend, cohort, and forecasting analyses.</li>
+                                            <li>Improved data models and optimized performance.</li>
+                                        </ul>
+                                    </div>
+                                    <p class="text-slate-300 text-sm leading-relaxed mt-3 italic">
+                                        This experience strengthened my skill in data storytelling and visual
+                                        communication.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NTI -->
+                    <div class="relative pl-8 reveal">
+                        <div
+                            class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-slate-950 border-2 border-blue-500">
+                        </div>
+                        <div class="glass-card p-6 flex flex-col md:flex-row gap-6 group hover:bg-white/10">
+                            <div class="flex-1">
+                                <div class="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-3">
+                                    <h3 class="text-xl font-bold text-white flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-white/10 p-1 overflow-hidden shrink-0">
+                                            <img src="assets/volunteer/nti.png" alt="NTI Logo"
+                                                class="w-full h-full object-contain">
+                                        </div>
+                                        Data Analysis Trainee
+                                    </h3>
+                                    <span
+                                        class="text-xs font-mono px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Sep
+                                        2024 – Oct 2024</span>
+                                </div>
+                                <p class="text-sm text-slate-400 mb-4 font-bold">National Telecommunication Institute
+                                    (NTI)</p>
+                                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                                    My training at NTI provided full exposure to the data analytics lifecycle — from
+                                    extraction to modeling. Using Python, Pandas, NumPy, SQL, and visualization tools, I
+                                    worked intensively on real datasets and gained practical experience with ML
+                                    techniques like regression, clustering, and decision trees.
+                                </p>
+                                <p class="text-slate-300 text-sm leading-relaxed">
+                                    The program strengthened my analytical thinking and ability to turn raw data into
+                                    insights.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Smart Village -->
+                    <div class="relative pl-8 reveal">
+                        <div
+                            class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-slate-950 border-2 border-blue-500">
+                        </div>
+                        <div class="glass-card p-6 flex flex-col md:flex-row gap-6 group hover:bg-white/10">
+                            <div class="flex-1">
+                                <div class="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-3">
+                                    <h3 class="text-xl font-bold text-white">Big Data Engineer Trainee</h3>
+                                    <span
+                                        class="text-xs font-mono px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Jul
+                                        2024 – Aug 2024</span>
+                                </div>
+                                <p class="text-sm text-slate-400 mb-4 font-bold">Smart Village Egypt</p>
+                                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                                    I gained in-depth understanding of distributed big data systems and real-time
+                                    processing.
+                                    I worked with Hadoop (HDFS, YARN, MapReduce), Spark, Kafka, Hive, ClickHouse,
+                                    Elasticsearch, and Linux automation.
+                                </p>
+                                <div class="space-y-3">
+                                    <div>
+                                        <h4 class="text-white font-bold text-sm mb-2">Key Achievements:</h4>
+                                        <ul class="list-disc list-inside text-slate-400 text-xs pl-2 space-y-1">
+                                            <li>Built and optimized big data pipelines.</li>
+                                            <li>Implemented streaming solutions using Kafka & Flume.</li>
+                                            <li>Worked with scalable, production-level data architectures.</li>
+                                        </ul>
+                                    </div>
+                                    <p class="text-slate-300 text-sm leading-relaxed mt-3 italic">
+                                        This experience shaped my technical confidence with enterprise big data
+                                        ecosystems.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITI -->
+                    <div class="relative pl-8 reveal">
+                        <div
+                            class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-slate-950 border-2 border-blue-500">
+                        </div>
+                        <div class="glass-card p-6 flex flex-col md:flex-row gap-6 group hover:bg-white/10">
+                            <div class="flex-1">
+                                <div class="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-3">
+                                    <h3 class="text-xl font-bold text-white flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-white/10 p-1 overflow-hidden shrink-0">
+                                            <img src="assets/volunteer/iti.jpg" alt="ITI Logo"
+                                                class="w-full h-full object-contain">
+                                        </div>
+                                        AI Intern
+                                    </h3>
+                                    <span
+                                        class="text-xs font-mono px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Aug
+                                        2024 – Sep 2024</span>
+                                </div>
+                                <p class="text-sm text-slate-400 mb-4 font-bold">Information Technology Institute (ITI)
+                                    • Egypt</p>
+                                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                                    This internship strengthened my machine learning and deep learning foundation. I
+                                    built and evaluated ML models such as regression, decision trees, SVMs, clustering
+                                    techniques, and applied feature engineering and tuning with GridSearchCV.
+                                </p>
+                                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                                    I also developed a strong understanding of neural networks and core deep learning
+                                    architectures.
+                                </p>
+                                <p class="text-slate-300 text-sm leading-relaxed italic">
+                                    A highly practical, intensive experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- McKinsey -->
+                    <div class="relative pl-8 reveal">
+                        <div
+                            class="absolute -left-[9px] top-6 w-4 h-4 rounded-full bg-slate-950 border-2 border-blue-500">
+                        </div>
+                        <div class="glass-card p-6 flex flex-col md:flex-row gap-6 group hover:bg-white/10">
+                            <div class="flex-1">
+                                <div class="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-3">
+                                    <h3 class="text-xl font-bold text-white flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-white/10 p-1 overflow-hidden shrink-0">
+                                            <img src="assets/volunteer/mckinsey.jpg" alt="McKinsey Logo"
+                                                class="w-full h-full object-contain">
+                                        </div>
+                                        Forward Program
+                                    </h3>
+                                    <span
+                                        class="text-xs font-mono px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Jun
+                                        2023 – Nov 2023</span>
+                                </div>
+                                <p class="text-sm text-slate-400 mb-4 font-bold">McKinsey & Company</p>
+                                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                                    A transformative 6-month program that developed my problem-solving, leadership, and
+                                    digital skills. I practiced McKinsey’s structured thinking, worked on a capstone
+                                    consulting project, improved communication, and gained exposure to business
+                                    analysis, visualization tools, and agile teamwork.
+                                </p>
+                                <p class="text-slate-300 text-sm leading-relaxed italic">
+                                    This experience strengthened my mindset for structured, high-impact problem solving.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- Projects -->
-        <section class="py-20 px-6 bg-gradient-to-t from-slate-950/80 to-transparent">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3 border-l-4 border-amber-500 pl-4 reveal">
-                    <i data-lucide="rocket" class="text-amber-500"></i> Featured Projects
+        <!-- Education Section -->
+        <section class="py-12 px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2
+                    class="text-3xl font-bold text-white mb-8 flex items-center gap-3 border-l-4 border-primary pl-4 reveal">
+                    <i data-lucide="graduation-cap" class="text-primary"></i> Education
                 </h2>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="flex flex-col h-full p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-amber-500/50 hover:shadow-[0_0_20px_rgba(245,158,11,0.1)] transition-all group reveal">
-                        <div class="mb-4">
-                            <span class="text-xs font-bold text-amber-500 uppercase tracking-wider">Graduation Project</span>
-                            <h3 class="text-xl font-bold text-white mt-1 group-hover:text-amber-400 transition-colors">Clear View App</h3>
-                        </div>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-6 flex-grow">
-                             Medical diagnosis app achieving 96% model accuracy using YOLOv8s. Reduced diagnosis time by 99.7% and includes a chatbot.
-                        </p>
-                        <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5">
-                            <span class="text-xs px-2 py-1 rounded bg-slate-900 text-slate-400 border border-slate-800">YOLOv8s</span>
-                            <span class="text-xs px-2 py-1 rounded bg-slate-900 text-slate-400 border border-slate-800">Medical AI</span>
-                        </div>
-                    </div>
-                    <!-- Other projects... -->
+                <div class="glass-card p-8 reveal border-l-4 border-primary">
+                    <h3 class="text-2xl font-bold text-white">Bachelor of Computer Science and Artificial Intelligence
+                    </h3>
+                    <p class="text-lg text-slate-300 mt-2">Fayoum University</p>
+                    <p class="text-sm text-slate-500 mt-1 font-mono">Sep 2021 - June 2025</p>
                 </div>
             </div>
         </section>
 
-        <!-- Certifications -->
+        <!-- Certifications Section -->
         <section class="py-20 px-6">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3 border-l-4 border-emerald-500 pl-4 reveal">
+                <h2
+                    class="text-3xl font-bold text-white mb-12 flex items-center gap-3 border-l-4 border-emerald-500 pl-4 reveal">
                     <i data-lucide="award" class="text-emerald-400"></i> Certifications
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <!-- Card 1 -->
-                    <div class="flex flex-col gap-3 p-0 rounded-xl bg-slate-900/40 border border-slate-800 hover:border-emerald-500/30 hover:bg-slate-900/60 transition-all cursor-default text-center items-center h-full overflow-hidden group reveal">
-                        <div class="w-full h-32 bg-emerald-500/5 flex items-center justify-center relative overflow-hidden">
-                            <img src="assets/certificates/aws.jpg" alt="AWS" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden')">
-                             <div class="absolute inset-0 flex items-center justify-center hidden bg-slate-900/50">
-                                <i data-lucide="award" class="text-emerald-500 w-8 h-8"></i>
-                            </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Certificate Item: AWS -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden glass-card hover:scale-[1.02] transition-all reveal">
+                        <div class="aspect-video bg-slate-900/50 overflow-hidden">
+                            <img src="assets/certificates/aws.jpg" alt="AWS Certification"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         </div>
-                        <div class="p-4 pt-2"><span class="text-slate-200 font-medium text-sm">AI & Data Science — AWS</span></div>
-                    </div>
-                     <!-- Card 2 -->
-                     <div class="flex flex-col gap-3 p-0 rounded-xl bg-slate-900/40 border border-slate-800 hover:border-emerald-500/30 hover:bg-slate-900/60 transition-all cursor-default text-center items-center h-full overflow-hidden group reveal" style="transition-delay: 0.1s;">
-                        <div class="w-full h-32 bg-emerald-500/5 flex items-center justify-center relative overflow-hidden">
-                            <img src="assets/certificates/huawei.jpg" alt="Huawei" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden')">
-                             <div class="absolute inset-0 flex items-center justify-center hidden bg-slate-900/50">
-                                <i data-lucide="award" class="text-emerald-500 w-8 h-8"></i>
-                            </div>
+                        <div class="p-4 relative bg-black/40 backdrop-blur-md border-t border-white/10">
+                            <h4 class="text-white font-bold text-sm mb-1">AWS Certified</h4>
+                            <p class="text-xs text-slate-400">Digital Egypt Pioneers Initiative</p>
                         </div>
-                        <div class="p-4 pt-2"><span class="text-slate-200 font-medium text-sm">Big Data — Huawei</span></div>
                     </div>
+
+                    <!-- Certificate Item: McKinsey -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden glass-card hover:scale-[1.02] transition-all reveal">
+                        <div class="aspect-video bg-slate-900/50 overflow-hidden">
+                            <img src="assets/certificates/mckinsey.jpg" alt="McKinsey Forward Program"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 relative bg-black/40 backdrop-blur-md border-t border-white/10">
+                            <h4 class="text-white font-bold text-sm mb-1">McKinsey Forward Program</h4>
+                            <p class="text-xs text-slate-400">McKinsey & Company</p>
+                        </div>
+                    </div>
+
+                    <!-- Certificate Item: NTI Data Analysis -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden glass-card hover:scale-[1.02] transition-all reveal">
+                        <div class="aspect-video bg-slate-900/50 overflow-hidden">
+                            <img src="assets/certificates/nti-da.jpg" alt="NTI Data Analysis"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 relative bg-black/40 backdrop-blur-md border-t border-white/10">
+                            <h4 class="text-white font-bold text-sm mb-1">Data Analysis Track</h4>
+                            <p class="text-xs text-slate-400">National Telecommunication Institute</p>
+                        </div>
+                    </div>
+
+                    <!-- Certificate Item: Data Analysis Excel -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden glass-card hover:scale-[1.02] transition-all reveal">
+                        <div class="aspect-video bg-slate-900/50 overflow-hidden">
+                            <img src="assets/certificates/Data Analysis Excel.jpg" alt="Data Analysis Using Excel"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 relative bg-black/40 backdrop-blur-md border-t border-white/10">
+                            <h4 class="text-white font-bold text-sm mb-1">Data Analysis Using Excel</h4>
+                            <p class="text-xs text-slate-400">تحليل البيانات باستخدام إكسل</p>
+                        </div>
+                    </div>
+
+                    <!-- Certificate Item: Udacity -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden glass-card hover:scale-[1.02] transition-all reveal">
+                        <div class="aspect-video bg-slate-900/50 overflow-hidden">
+                            <img src="assets/certificates/udacity.jpg" alt="Udacity Certification"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 relative bg-black/40 backdrop-blur-md border-t border-white/10">
+                            <h4 class="text-white font-bold text-sm mb-1">Udacity Nanodegree</h4>
+                            <p class="text-xs text-slate-400">AI & Data Science</p>
+                        </div>
+                    </div>
+
+                    <!-- Certificate Item: Huawei -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden glass-card hover:scale-[1.02] transition-all reveal">
+                        <div class="aspect-video bg-slate-900/50 overflow-hidden">
+                            <img src="assets/certificates/huawei.jpg" alt="Huawei Certification"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 relative bg-black/40 backdrop-blur-md border-t border-white/10">
+                            <h4 class="text-white font-bold text-sm mb-1">Huawei Certification</h4>
+                            <p class="text-xs text-slate-400">HCIA / ICT</p>
+                        </div>
+                    </div>
+
+                    <!-- Certificate Item: SQL -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden glass-card hover:scale-[1.02] transition-all reveal">
+                        <div class="aspect-video bg-slate-900/50 overflow-hidden">
+                            <img src="assets/certificates/sql.jpg" alt="SQL Certification"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 relative bg-black/40 backdrop-blur-md border-t border-white/10">
+                            <h4 class="text-white font-bold text-sm mb-1">SQL Fundamentals</h4>
+                            <p class="text-xs text-slate-400">Database Management</p>
+                        </div>
+                    </div>
+
+                    <!-- Certificate Item: Supervised Learning -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden glass-card hover:scale-[1.02] transition-all reveal">
+                        <div class="aspect-video bg-slate-900/50 overflow-hidden">
+                            <img src="assets/certificates/supervised.jpg" alt="Supervised Learning"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 relative bg-black/40 backdrop-blur-md border-t border-white/10">
+                            <h4 class="text-white font-bold text-sm mb-1">Supervised Learning</h4>
+                            <p class="text-xs text-slate-400">Machine Learning Specialization</p>
+                        </div>
+                    </div>
+
+                    <!-- Certificate Item: Architecture -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden glass-card hover:scale-[1.02] transition-all reveal">
+                        <div class="aspect-video bg-slate-900/50 overflow-hidden">
+                            <img src="assets/certificates/arch.jpg" alt="Architecture"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 relative bg-black/40 backdrop-blur-md border-t border-white/10">
+                            <h4 class="text-white font-bold text-sm mb-1">Software Architecture</h4>
+                            <p class="text-xs text-slate-400">Technical Foundation</p>
+                        </div>
+                    </div>
+
+                    <!-- Certificate Item: Data Analysis Eyouth -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden glass-card hover:scale-[1.02] transition-all reveal">
+                        <div class="aspect-video bg-slate-900/50 overflow-hidden">
+                            <img src="assets/certificates/Data Analysis Eyouth.jpg" alt="Eyouth Analysis"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 relative bg-black/40 backdrop-blur-md border-t border-white/10">
+                            <h4 class="text-white font-bold text-sm mb-1">Data Analysis</h4>
+                            <p class="text-xs text-slate-400">Eyouth</p>
+                        </div>
+                    </div>
+
+                    <!-- Certificate Item: Data Awareness -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden glass-card hover:scale-[1.02] transition-all reveal">
+                        <div class="aspect-video bg-slate-900/50 overflow-hidden">
+                            <img src="assets/certificates/Data Awareness.jpg" alt="Data Awareness"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 relative bg-black/40 backdrop-blur-md border-t border-white/10">
+                            <h4 class="text-white font-bold text-sm mb-1">Data Awareness</h4>
+                            <p class="text-xs text-slate-400">Professional Development</p>
+                        </div>
+                    </div>
+
+                    <!-- Certificate Item: Database Mahara -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden glass-card hover:scale-[1.02] transition-all reveal">
+                        <div class="aspect-video bg-slate-900/50 overflow-hidden">
+                            <img src="assets/certificates/database_mahara.jpg" alt="Database Fundamentals"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 relative bg-black/40 backdrop-blur-md border-t border-white/10">
+                            <h4 class="text-white font-bold text-sm mb-1">Database Fundamentals</h4>
+                            <p class="text-xs text-slate-400">Mahara Tech</p>
+                        </div>
+                    </div>
+
+                    <!-- Certificate Item: FAI Analysis -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden glass-card hover:scale-[1.02] transition-all reveal">
+                        <div class="aspect-video bg-slate-900/50 overflow-hidden">
+                            <img src="assets/certificates/FAI_DAT9_S1_12505.jpg" alt="Specialized Analysis"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 relative bg-black/40 backdrop-blur-md border-t border-white/10">
+                            <h4 class="text-white font-bold text-sm mb-1">Specialized Data Training</h4>
+                            <p class="text-xs text-slate-400">Advanced Analytics</p>
+                        </div>
+                    </div>
+
+                    <!-- Certificate Item: ML Pipelines -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden glass-card hover:scale-[1.02] transition-all reveal">
+                        <div class="aspect-video bg-slate-900/50 overflow-hidden">
+                            <img src="assets/certificates/mlpip.jpg" alt="ML Pipelines"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 relative bg-black/40 backdrop-blur-md border-t border-white/10">
+                            <h4 class="text-white font-bold text-sm mb-1">Machine Learning Pipelines</h4>
+                            <p class="text-xs text-slate-400">MLOps & Development</p>
+                        </div>
+                    </div>
+
+                    <!-- Certificate Item: Qafza Internship -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden glass-card hover:scale-[1.02] transition-all reveal">
+                        <div class="aspect-video bg-slate-900/50 overflow-hidden">
+                            <img src="assets/certificates/qafza.jpg" alt="Qafza Internship"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 relative bg-black/40 backdrop-blur-md border-t border-white/10">
+                            <h4 class="text-white font-bold text-sm mb-1">Qafza Internship</h4>
+                            <p class="text-xs text-slate-400">Data Analytics</p>
+                        </div>
+                    </div>
+
+                    <!-- Certificate Item: Sprints -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden glass-card hover:scale-[1.02] transition-all reveal">
+                        <div class="aspect-video bg-slate-900/50 overflow-hidden">
+                            <img src="assets/certificates/Sprints .jpg" alt="Sprints Program"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-4 relative bg-black/40 backdrop-blur-md border-t border-white/10">
+                            <h4 class="text-white font-bold text-sm mb-1">Sprints Program</h4>
+                            <p class="text-xs text-slate-400">Technical Training</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- Footer -->
+        <!-- Footer / Contact -->
         <section class="py-24 px-6 text-center">
-            <div class="max-w-2xl mx-auto bg-gradient-to-r from-primary/10 via-neon-purple/10 to-primary/10 p-12 rounded-3xl border border-white/10 reveal">
-                <h2 class="text-3xl font-bold text-white mb-6">Ready to Collaborate?</h2>
-                <p class="text-slate-300 mb-8 text-lg">I'm always open to discussing new projects, creative ideas, or opportunities.</p>
-                <button class="px-10 py-4 rounded-full bg-white text-black font-bold hover:bg-slate-200 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 active:translate-y-0 text-lg">
-                    Let's Talk
-                </button>
+            <div
+                class="max-w-2xl mx-auto bg-gradient-to-r from-primary/10 via-neon-purple/10 to-primary/10 p-12 rounded-3xl border border-white/10 reveal glass">
+                <h2 class="text-3xl font-bold text-white mb-6">Let's Talk 👋</h2>
+                <p class="text-slate-300 mb-8 text-lg">I'm always open to discussing new projects, creative ideas, or
+                    opportunities.</p>
+                <div class="flex gap-6 justify-center items-center">
+                    <a href="mailto:biltaji.mohamed@gmail.com"
+                        class="p-4 rounded-full bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:border-primary/50 hover:bg-primary/20 transition-all duration-300 hover:scale-110 group shadow-lg shadow-black/20"
+                        aria-label="Email">
+                        <i data-lucide="mail" class="w-6 h-6 group-hover:text-primary"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/beltagy" target="_blank"
+                        class="p-4 rounded-full bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:border-[#0077b5]/50 hover:bg-[#0077b5]/20 transition-all duration-300 hover:scale-110 group shadow-lg shadow-black/20"
+                        aria-label="LinkedIn">
+                        <i data-lucide="linkedin" class="w-6 h-6 group-hover:text-[#0077b5]"></i>
+                    </a>
+                    <a href="https://twitter.com/Biltaji_mohamed" target="_blank"
+                        class="p-4 rounded-full bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:border-blue-400/50 hover:bg-blue-400/20 transition-all duration-300 hover:scale-110 group shadow-lg shadow-black/20"
+                        aria-label="Twitter">
+                        <i data-lucide="twitter" class="w-6 h-6 group-hover:text-blue-400"></i>
+                    </a>
+                    <a href="https://wa.me/201096383395" target="_blank"
+                        class="p-4 rounded-full bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:border-emerald-500/50 hover:bg-emerald-500/20 transition-all duration-300 hover:scale-110 group shadow-lg shadow-black/20"
+                        aria-label="WhatsApp">
+                        <i data-lucide="message-circle" class="w-6 h-6 group-hover:text-emerald-500"></i>
+                    </a>
+                </div>
             </div>
         </section>
 
         <footer class="py-8 text-center text-slate-600 text-sm border-t border-white/5">
-            <p>© 2025 Beltagy Mohamed. Built with Vanilla HTML/JS & Tailwind AI.</p>
+            <p>© 2025 Beltagy Mohamed. Built with <i data-lucide="heart" class="inline w-3 h-3 text-red-500"></i> &
+                Code.</p>
         </footer>
 
     </main>
 
     <!-- Scripts -->
-    <script src="particles.js"></script>
+    <script src="wave.js"></script>
     <script>
-        // Init Icons
         lucide.createIcons();
-
-        // Reveal on Scroll Observer
         const revealElements = document.querySelectorAll('.reveal');
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if(entry.isIntersecting) {
+                if (entry.isIntersecting) {
                     entry.target.classList.add('active');
                 }
             });
         }, { threshold: 0.1 });
-
         revealElements.forEach(el => revealObserver.observe(el));
     </script>
 </body>
+
 </html>
